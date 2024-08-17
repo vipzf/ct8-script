@@ -1,3 +1,4 @@
+
 import os
 import json
 import subprocess
@@ -35,10 +36,10 @@ except json.JSONDecodeError:
     exit(1)
 
 # 初始化汇总消息
-summary_message = "serv00-vless 恢复操作结果：\n"
+summary_message = "ct8-vless 恢复操作结果：\n"
 
 # 默认恢复命令
-default_restore_command = "cd ~/domains/$USER.serv00.net/vless && ./check_vless.sh"
+default_restore_command = "cd ~/domains/$USER.ct8.net/vless && ./check_vless.sh"
 
 # 遍历服务器列表并执行恢复操作
 for server in servers:
@@ -60,3 +61,4 @@ for server in servers:
 
 # 发送汇总消息到 Telegram
 send_telegram_message(telegram_token, telegram_chat_id, summary_message)
+
